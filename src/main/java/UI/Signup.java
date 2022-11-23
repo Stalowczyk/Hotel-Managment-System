@@ -4,6 +4,9 @@
  */
 package UI;
 
+import javax.swing.JOptionPane;
+import DatabaseLogic.DBUpdater;
+
 /**
  *
  * @author pawel
@@ -31,60 +34,115 @@ public class Signup extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField2 = new javax.swing.JTextField();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jTextField4 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("Signup");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(444, 18, -1, -1));
 
-        jLabel2.setText("jLabel2");
+        jLabel2.setText("Username");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(242, 127, -1, -1));
 
-        jLabel3.setText("jLabel3");
+        jLabel3.setText("Email");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 210, -1, -1));
 
-        jLabel4.setText("jLabel4");
+        jLabel4.setText("Password");
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, -1, -1));
 
-        jLabel5.setText("jLabel5");
+        jLabel5.setText("Security question");
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(242, 284, -1, -1));
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(351, 124, 303, -1));
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 303, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(444, 444, 444)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel4))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel5)))
-                .addContainerGap(519, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addComponent(jLabel1)
-                .addGap(83, 83, 83)
-                .addComponent(jLabel2)
-                .addGap(41, 41, 41)
-                .addComponent(jLabel3)
-                .addGap(30, 30, 30)
-                .addComponent(jLabel4)
-                .addGap(28, 28, 28)
-                .addComponent(jLabel5)
-                .addContainerGap(220, Short.MAX_VALUE))
-        );
+        jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 170, 303, -1));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "In what city were you born?", "What is the name of your favorite pet?", "What is your mother's maiden name?", "What high school did you attend?", "What was the name of your elementary school?", "What was the make of your first car?", "What was your favorite food as a child?" }));
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(351, 284, 303, -1));
+
+        jLabel6.setText("Answer");
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(242, 324, -1, -1));
+
+        jLabel7.setText("Address");
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(242, 247, -1, -1));
+        getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(351, 244, 303, -1));
+        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(351, 324, 303, -1));
+
+        jButton1.setText("Signup");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(351, 364, -1, -1));
+
+        jButton2.setText("Login");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(441, 364, -1, -1));
+
+        jButton3.setText("Forgot Password?");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(531, 364, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String name =jTextField1.getText();
+        String password=jPasswordField1.getText();
+        String email=jTextField2.getText();
+        String address=jTextField3.getText();
+        String securityQuestion = (String)jComboBox1.getSelectedItem();
+        String answer = jTextField4.getText();
+        if(name.equals("") || email.equals("") || password.equals("") || answer.equals("") || address.equals(""))
+            JOptionPane.showMessageDialog(null, "You must complete every field in order to proceed ");
+        else
+        {
+            String Query;
+            Query="insert into users values('"+name+"','"+password+"','"+email+"','"+address+"','"+securityQuestion+"','"+answer+"','false')";
+            DBUpdater.setData(Query, "Registered Successfully");
+            setVisible(false);
+            new Signup().setVisible(true);
+            
+        }
+        
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jPasswordField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField1ActionPerformed
+
+    }//GEN-LAST:event_jPasswordField1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -122,10 +180,21 @@ public class Signup extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPasswordField jPasswordField1;
+    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextField4;
     // End of variables declaration//GEN-END:variables
 }
