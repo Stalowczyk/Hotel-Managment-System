@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
  *
  * @author pawel
  */
-public class VerifyLogin {
+public class Select {
     
     /**
      *

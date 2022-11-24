@@ -6,7 +6,7 @@ package UI;
 
 import javax.swing.JOptionPane;
 import java.sql.*;
-import DatabaseLogic.VerifyLogin;
+import DatabaseLogic.Select;
 
 
 /**
@@ -64,12 +64,23 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(243, 221, -1, -1));
 
         jButton2.setText("Signup");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(333, 221, -1, -1));
 
         jButton3.setText("Forgot Password?");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(423, 221, -1, -1));
 
-        pack();
+        setSize(new java.awt.Dimension(692, 380));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -91,7 +102,7 @@ public class Login extends javax.swing.JFrame {
         }
         else
         {
-            ResultSet rs =VerifyLogin.getData("select * from users where email='"+email+"' and password='"+password+"'");
+            ResultSet rs =Select.getData("select * from users where email='"+email+"' and password='"+password+"'");
             try
             {
                 if(rs.next())
@@ -116,6 +127,18 @@ public class Login extends javax.swing.JFrame {
         if(check==0)
             JOptionPane.showMessageDialog(null, "Wrong email or password");
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        new Signup().setVisible(true);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        setVisible(false);
+        new ForgotPassword().setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
