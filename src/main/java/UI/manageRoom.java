@@ -11,6 +11,7 @@ import java.sql.*;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
+
 /**
  *
  * @author pawel
@@ -69,7 +70,7 @@ public class manageRoom extends javax.swing.JFrame {
 
         jLabel3.setText("Room type");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AC", "No AC" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "AC", "Non-AC" }));
 
         jLabel4.setText("Bed");
 
@@ -89,10 +90,9 @@ public class manageRoom extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(34, 34, 34)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -104,7 +104,10 @@ public class manageRoom extends javax.swing.JFrame {
                             .addComponent(jLabel5)
                             .addComponent(jButton1)
                             .addComponent(jTextField2)
-                            .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                            .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(449, 449, 449)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(235, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -150,6 +153,7 @@ public class manageRoom extends javax.swing.JFrame {
         DBUpdater.setData(Query, "Successfully Updated");
         setVisible(false);
         new manageRoom().setVisible(true);
+        
         
         
     }//GEN-LAST:event_jButton1ActionPerformed
