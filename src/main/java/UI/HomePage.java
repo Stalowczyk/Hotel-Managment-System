@@ -35,63 +35,126 @@ public class HomePage extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(null);
 
-        jButton2.setText("Customer Check in");
+        jButton2.setBackground(new java.awt.Color(0, 176, 240));
+        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icona_check_in_25.png"))); // NOI18N
+        jButton2.setText("Check in");
+        jButton2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(140, 0, 120, 70);
+        jButton2.setBounds(190, 5, 140, 60);
 
+        jButton4.setBackground(new java.awt.Color(0, 155, 210));
+        jButton4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
         jButton4.setText("Logout");
+        jButton4.setBorderPainted(false);
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(6, 473, 242, 106);
+        jButton4.setBounds(760, 20, 100, 40);
 
-        jButton3.setText("Customer Check Out");
+        jButton3.setBackground(new java.awt.Color(0, 176, 240));
+        jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icona_check_out_25.png"))); // NOI18N
+        jButton3.setText("Check Out");
+        jButton3.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(260, 0, 100, 70);
+        jButton3.setBounds(340, 5, 170, 60);
 
-        jButton6.setText("Current Occupied Rooms");
+        jButton6.setBackground(new java.awt.Color(0, 176, 240));
+        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icona_occupato_25.png"))); // NOI18N
+        jButton6.setText("<html> Occupied </br> Rooms </html>");
+        jButton6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jButton6);
-        jButton6.setBounds(360, 0, 270, 70);
+        jButton6.setBounds(520, 5, 140, 60);
 
-        jButton5.setText("Exit app");
+        jButton5.setBackground(new java.awt.Color(0, 176, 240));
+        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/close.png"))); // NOI18N
+        jButton5.setBorderPainted(false);
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(6, 597, 242, 68);
+        jButton5.setBounds(860, 0, 50, 40);
 
-        jLabel1.setFont(new java.awt.Font("SansSerif", 0, 48)); // NOI18N
-        jLabel1.setText("SKY HOTEL");
+        jLabel1.setFont(new java.awt.Font("Vladimir Script", 0, 120)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(53, 194, 245));
+        jLabel1.setText("Sky Hotel");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(500, 360, 266, 62);
+        jLabel1.setBounds(210, 240, 510, 146);
 
+        jButton1.setBackground(new java.awt.Color(0, 176, 240));
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icona_stanza_25.png"))); // NOI18N
         jButton1.setText("Manage room");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(0, 0, 140, 74);
+        jButton1.setBounds(10, 5, 170, 60);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nuvola_25.png"))); // NOI18N
+        getContentPane().add(jLabel2);
+        jLabel2.setBounds(590, 300, 420, 200);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nuvola_inv_10.png"))); // NOI18N
+        getContentPane().add(jLabel3);
+        jLabel3.setBounds(470, 460, 170, 70);
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nuvola_10.png"))); // NOI18N
+        getContentPane().add(jLabel4);
+        jLabel4.setBounds(0, 120, 270, 130);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nuvola_inv_10.png"))); // NOI18N
+        getContentPane().add(jLabel5);
+        jLabel5.setBounds(770, 100, 120, 70);
+
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nuvola_5.png"))); // NOI18N
+        jLabel6.setToolTipText("");
+        getContentPane().add(jLabel6);
+        jLabel6.setBounds(160, 110, 110, 90);
+
+        jPanel1.setBackground(new java.awt.Color(161, 226, 249));
+        getContentPane().add(jPanel1);
+        jPanel1.setBounds(0, 80, 910, 500);
+
+        jPanel2.setBackground(new java.awt.Color(0, 176, 240));
+        getContentPane().add(jPanel2);
+        jPanel2.setBounds(0, 0, 910, 80);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -173,5 +236,12 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }
