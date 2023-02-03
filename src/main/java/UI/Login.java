@@ -7,6 +7,8 @@ package UI;
 import javax.swing.JOptionPane;
 import java.sql.*;
 import DatabaseLogic.Select;
+import java.awt.Color;
+import javax.swing.BorderFactory;
 
 import javax.swing.JFrame;
 
@@ -22,6 +24,7 @@ public class Login extends javax.swing.JFrame {
      */
     public Login() {
         initComponents();
+        getRootPane().setBorder(BorderFactory.createLineBorder(Color.black));
         
 
         
@@ -55,6 +58,7 @@ public class Login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(500, 500));
+        setUndecorated(true);
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(0, 176, 240));
@@ -169,7 +173,7 @@ public class Login extends javax.swing.JFrame {
         getContentPane().add(jPanel2);
         jPanel2.setBounds(0, 120, 500, 380);
 
-        setSize(new java.awt.Dimension(511, 508));
+        setSize(new java.awt.Dimension(500, 500));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

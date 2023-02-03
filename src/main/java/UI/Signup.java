@@ -6,6 +6,8 @@ package UI;
 
 import javax.swing.JOptionPane;
 import DatabaseLogic.DBUpdater;
+import java.awt.Color;
+import javax.swing.BorderFactory;
 
 /**
  *
@@ -18,6 +20,7 @@ public class Signup extends javax.swing.JFrame {
      */
     public Signup() {
         initComponents();
+        getRootPane().setBorder(BorderFactory.createLineBorder(Color.black));
     }
 
     /**
@@ -53,6 +56,9 @@ public class Signup extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
+        setMinimumSize(new java.awt.Dimension(730, 500));
+        setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(730, 500));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("SansSerif", 0, 18)); // NOI18N
@@ -130,7 +136,7 @@ public class Signup extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 450, -1, -1));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 430, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nuvola_25.png"))); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(525, 350, -1, -1));
@@ -155,7 +161,7 @@ public class Signup extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(161, 226, 249));
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 730, 420));
 
-        setSize(new java.awt.Dimension(746, 508));
+        setSize(new java.awt.Dimension(730, 500));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

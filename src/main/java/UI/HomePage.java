@@ -4,6 +4,8 @@
  */
 package UI;
 
+import java.awt.Color;
+import javax.swing.BorderFactory;
 import javax.swing.JOptionPane;
 
 /**
@@ -17,6 +19,7 @@ public class HomePage extends javax.swing.JFrame {
      */
     public HomePage() {
         initComponents();
+        getRootPane().setBorder(BorderFactory.createLineBorder(Color.black));
     }
 
     /**
@@ -44,6 +47,9 @@ public class HomePage extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(906, 573));
+        setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(906, 573));
         getContentPane().setLayout(null);
 
         jButton2.setBackground(new java.awt.Color(0, 176, 240));
@@ -156,7 +162,8 @@ public class HomePage extends javax.swing.JFrame {
         getContentPane().add(jPanel2);
         jPanel2.setBounds(0, 0, 910, 80);
 
-        pack();
+        setSize(new java.awt.Dimension(906, 573));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -172,6 +179,11 @@ public class HomePage extends javax.swing.JFrame {
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         // TODO add your handling code here:
+        int a=JOptionPane.showConfirmDialog(null, "Do you want to exit the app?","Select",JOptionPane.YES_NO_OPTION);
+        if(a==0)
+        {
+            System.exit(0);
+        }
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

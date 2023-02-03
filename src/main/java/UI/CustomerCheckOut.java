@@ -73,8 +73,6 @@ public class CustomerCheckOut extends javax.swing.JFrame {
         jTextField9 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
         jButton4 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jTextField10 = new javax.swing.JTextField();
@@ -82,6 +80,7 @@ public class CustomerCheckOut extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
 
         setMinimumSize(new java.awt.Dimension(900, 600));
+        setUndecorated(true);
         addComponentListener(new java.awt.event.ComponentAdapter() {
             public void componentShown(java.awt.event.ComponentEvent evt) {
                 formComponentShown(evt);
@@ -198,19 +197,6 @@ public class CustomerCheckOut extends javax.swing.JFrame {
         getContentPane().add(jButton3);
         jButton3.setBounds(510, 70, 72, 23);
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-
-            },
-            new String [] {
-                "ID", "Name", "Surname", "Mobile Number", "Gender", "Email", "ID Proof", "Address", "Check In Date", "Room Number", "Bed ", "Room Type", "Price Per Day"
-            }
-        ));
-        jScrollPane1.setViewportView(jTable1);
-
-        getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(6, 521, 1116, 236);
-
         jButton4.setText("Back");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -242,11 +228,11 @@ public class CustomerCheckOut extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 760, Short.MAX_VALUE)
+            .addGap(0, 540, Short.MAX_VALUE)
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 1170, 760);
+        jPanel1.setBounds(0, 0, 1170, 540);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
@@ -257,21 +243,7 @@ public class CustomerCheckOut extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
-        // TODO add your handling code here:
-        ResultSet rs = Select.getData("select *from customer where checkOut is NULL");
-        DefaultTableModel model =(DefaultTableModel)jTable1.getModel();
-        try
-        {
-            while(rs.next())
-            {
-                model.addRow(new Object[]{rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7),rs.getString(8),rs.getString(9),rs.getString(10),rs.getString(11),rs.getString(12),rs.getString(13)});
-            }
-            
-        }
-        catch(Exception e)
-        {
-            JOptionPane.showMessageDialog(null, e);
-        }
+
     }//GEN-LAST:event_formComponentShown
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -368,8 +340,6 @@ public class CustomerCheckOut extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField2;

@@ -7,6 +7,8 @@ package UI;
 import javax.swing.JOptionPane;
 import java.sql.*;
 import DatabaseLogic.*;
+import java.awt.Color;
+import javax.swing.BorderFactory;
 
 /**
  *
@@ -19,6 +21,7 @@ public class ForgotPassword extends javax.swing.JFrame {
      */
     public ForgotPassword() {
         initComponents();
+        getRootPane().setBorder(BorderFactory.createLineBorder(Color.black));
     }
     String email;
 
@@ -48,6 +51,7 @@ public class ForgotPassword extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
@@ -129,7 +133,7 @@ public class ForgotPassword extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(161, 226, 249));
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 830, 510));
 
-        setSize(new java.awt.Dimension(838, 516));
+        setSize(new java.awt.Dimension(822, 508));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

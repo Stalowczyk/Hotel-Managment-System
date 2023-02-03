@@ -4,16 +4,21 @@
  */
 package UI;
 
+import DatabaseLogic.Select;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author pawel
  */
-public class CurrentOccupiedRooms extends javax.swing.JFrame {
+public class ClientArchive extends javax.swing.JFrame {
 
     /**
-     * Creates new form CustomerDetailsArchive
+     * Creates new form CurrentOccupiedRooms
      */
-    public CurrentOccupiedRooms() {
+    public ClientArchive() {
         initComponents();
     }
 
@@ -26,8 +31,8 @@ public class CurrentOccupiedRooms extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -40,16 +45,21 @@ public class CurrentOccupiedRooms extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setText("Current Occupied Rooms");
+        jLabel1.setText("Client Archive");
 
-        jTextField2.setText("Search by Surname or Room");
-        jTextField2.addMouseListener(new java.awt.event.MouseAdapter() {
+        jTextField1.setText("Search by room or surname");
+        jTextField1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jTextField2MouseClicked(evt);
+                jTextField1MouseClicked(evt);
             }
         });
 
         jButton1.setText("Search");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Clear");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -64,39 +74,43 @@ public class CurrentOccupiedRooms extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Room number", "Name", "Surname", "Email", "Check in date", "Room Price"
+                "Room number", "Name", "Surname", "Email", "Check in date", "Check out date", "Amount payed"
             }
         ));
+        jTable1.setColumnSelectionAllowed(true);
+        jTable1.getTableHeader().setReorderingAllowed(false);
         jScrollPane1.setViewportView(jTable1);
+        jTable1.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 272, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1)
-                .addGap(18, 18, 18)
-                .addComponent(jButton2)
-                .addContainerGap(458, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 320, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(28, 28, 28)
+                        .addComponent(jButton1)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton2)))
+                .addContainerGap(382, Short.MAX_VALUE))
             .addComponent(jScrollPane1)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(29, 29, 29)
+                .addComponent(jLabel1)
+                .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addGap(37, 37, 37)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 367, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
@@ -104,20 +118,52 @@ public class CurrentOccupiedRooms extends javax.swing.JFrame {
 
     private void formComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_formComponentShown
         // TODO add your handling code here:
-        
+        ResultSet rs = Select.getData("select *from customer where checkOut is NOT NULL");
+        DefaultTableModel model =(DefaultTableModel)jTable1.getModel();
+        try
+        {
+            while(rs.next())
+            {
+                model.addRow(new Object[]{rs.getString(10),rs.getString(2),rs.getString(3),rs.getString(6),rs.getString(9),rs.getString(16),rs.getString(15)});
+            }
+            
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
     }//GEN-LAST:event_formComponentShown
 
-    private void jTextField2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField2MouseClicked
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        jTextField2.setText((""));
-    }//GEN-LAST:event_jTextField2MouseClicked
+        String roomORsurname =jTextField1.getText();
+        ResultSet rs =Select.getData("select *from customer where checkOut is NOT NULL AND roomNumber like '%"+roomORsurname+"%' or surname like '%"+roomORsurname+"%'");
+        DefaultTableModel model = (DefaultTableModel)jTable1.getModel();
+        model.setRowCount(0);
+        try
+        {
+            while(rs.next())
+            {
+                model.addRow(new Object[]{rs.getString(10),rs.getString(2),rs.getString(3),rs.getString(6),rs.getString(9),rs.getString(16),rs.getString(15)});
+            }
+            rs.close();
+        }
+        catch(Exception e)
+        {
+            JOptionPane.showMessageDialog(null, e);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
         setVisible(false);
-        new CurrentOccupiedRooms().setVisible(true);
-        
+        new ClientArchive().setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jTextField1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTextField1MouseClicked
+        // TODO add your handling code here:
+        jTextField1.setText((""));
+    }//GEN-LAST:event_jTextField1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -136,13 +182,13 @@ public class CurrentOccupiedRooms extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(CurrentOccupiedRooms.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ClientArchive.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(CurrentOccupiedRooms.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ClientArchive.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(CurrentOccupiedRooms.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ClientArchive.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(CurrentOccupiedRooms.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ClientArchive.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -150,7 +196,7 @@ public class CurrentOccupiedRooms extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new CurrentOccupiedRooms().setVisible(true);
+                new ClientArchive().setVisible(true);
             }
         });
     }
@@ -158,9 +204,9 @@ public class CurrentOccupiedRooms extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField2;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

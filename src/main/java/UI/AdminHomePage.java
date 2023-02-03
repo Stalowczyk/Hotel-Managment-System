@@ -4,7 +4,9 @@
  */
 package UI;
 import DatabaseLogic.*;
+import java.awt.Color;
 import java.sql.*;
+import javax.swing.BorderFactory;
 
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
@@ -21,6 +23,7 @@ public class AdminHomePage extends javax.swing.JFrame {
      */
     public AdminHomePage() {
         initComponents();
+        getRootPane().setBorder(BorderFactory.createLineBorder(Color.black));
     }
 
     /**
