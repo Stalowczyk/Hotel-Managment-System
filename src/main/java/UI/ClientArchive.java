@@ -102,7 +102,7 @@ public class ClientArchive extends javax.swing.JFrame {
         jTable1.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(0, 112, 910, 402);
+        jScrollPane1.setBounds(20, 112, 850, 402);
 
         jPanel1.setBackground(new java.awt.Color(161, 226, 249));
 

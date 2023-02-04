@@ -100,6 +100,11 @@ public class manageRoom extends javax.swing.JFrame {
         jLabel4.setBounds(510, 250, 70, 16);
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Single", "Double", "Triple" }));
+        jComboBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox2ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jComboBox2);
         jComboBox2.setBounds(602, 249, 290, 22);
 
@@ -178,6 +183,10 @@ public class manageRoom extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_formComponentShown
+
+    private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox2ActionPerformed
 
     /**
      * @param args the command line arguments

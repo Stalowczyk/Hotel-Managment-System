@@ -35,7 +35,6 @@ public class AdminHomePage extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -47,6 +46,7 @@ public class AdminHomePage extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -56,10 +56,6 @@ public class AdminHomePage extends javax.swing.JFrame {
             }
         });
         getContentPane().setLayout(null);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nuvola con scritta_50.png"))); // NOI18N
-        getContentPane().add(jLabel3);
-        jLabel3.setBounds(580, 430, 320, 170);
 
         jPanel1.setBackground(new java.awt.Color(0, 176, 240));
 
@@ -122,10 +118,15 @@ public class AdminHomePage extends javax.swing.JFrame {
         jPanel1.setBounds(0, 0, 900, 60);
 
         jPanel2.setBackground(new java.awt.Color(161, 226, 249));
+        jPanel2.setLayout(null);
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 155, 232));
         jLabel2.setText("Search users by name or email");
+        jPanel2.add(jLabel2);
+        jLabel2.setBounds(24, 16, 204, 20);
+        jPanel2.add(jTextField1);
+        jTextField1.setBounds(234, 16, 430, 22);
 
         jButton3.setBackground(new java.awt.Color(0, 176, 240));
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -137,6 +138,8 @@ public class AdminHomePage extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton3);
+        jButton3.setBounds(682, 16, 72, 23);
 
         jButton4.setBackground(new java.awt.Color(165, 165, 165));
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -148,6 +151,8 @@ public class AdminHomePage extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton4);
+        jButton4.setBounds(785, 16, 72, 23);
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -164,39 +169,12 @@ public class AdminHomePage extends javax.swing.JFrame {
         });
         jScrollPane2.setViewportView(jTable2);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 890, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 430, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton3)
-                        .addGap(31, 31, 31)
-                        .addComponent(jButton4)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 402, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(81, Short.MAX_VALUE))
-        );
+        jPanel2.add(jScrollPane2);
+        jScrollPane2.setBounds(16, 57, 840, 402);
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nuvola con scritta_50.png"))); // NOI18N
+        jPanel2.add(jLabel3);
+        jLabel3.setBounds(580, 390, 320, 170);
 
         getContentPane().add(jPanel2);
         jPanel2.setBounds(0, 60, 900, 540);

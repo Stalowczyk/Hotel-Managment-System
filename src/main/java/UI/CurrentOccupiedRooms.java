@@ -89,7 +89,7 @@ public class CurrentOccupiedRooms extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(0, 126, 910, 400);
+        jScrollPane1.setBounds(30, 126, 830, 400);
 
         jPanel1.setBackground(new java.awt.Color(161, 226, 249));
 
