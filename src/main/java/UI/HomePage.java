@@ -38,6 +38,7 @@ public class HomePage extends javax.swing.JFrame {
         jButton5 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -45,13 +46,14 @@ public class HomePage extends javax.swing.JFrame {
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        jButton7 = new javax.swing.JButton();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1000, 700));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(906, 573));
+        setPreferredSize(new java.awt.Dimension(1100, 800));
         getContentPane().setLayout(null);
 
         jButton2.setBackground(new java.awt.Color(0, 176, 240));
@@ -66,7 +68,7 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton2);
-        jButton2.setBounds(190, 5, 140, 60);
+        jButton2.setBounds(200, 5, 170, 60);
 
         jButton4.setBackground(new java.awt.Color(0, 155, 210));
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -79,7 +81,7 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton4);
-        jButton4.setBounds(850, 20, 100, 40);
+        jButton4.setBounds(930, 15, 120, 40);
 
         jButton3.setBackground(new java.awt.Color(0, 176, 240));
         jButton3.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -93,10 +95,10 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton3);
-        jButton3.setBounds(340, 5, 170, 60);
+        jButton3.setBounds(380, 5, 160, 60);
 
         jButton6.setBackground(new java.awt.Color(0, 176, 240));
-        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 13)); // NOI18N
+        jButton6.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton6.setForeground(new java.awt.Color(255, 255, 255));
         jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icona_occupato_25.png"))); // NOI18N
         jButton6.setText("<html> Occupied </br> Rooms </html>");
@@ -107,7 +109,7 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton6);
-        jButton6.setBounds(520, 5, 160, 60);
+        jButton6.setBounds(550, 5, 180, 60);
 
         jButton5.setBackground(new java.awt.Color(0, 176, 240));
         jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/close.png"))); // NOI18N
@@ -118,13 +120,13 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton5);
-        jButton5.setBounds(950, 0, 50, 40);
+        jButton5.setBounds(1050, 0, 50, 40);
 
         jLabel1.setFont(new java.awt.Font("Vladimir Script", 0, 120)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(53, 194, 245));
         jLabel1.setText("Sky Hotel");
         getContentPane().add(jLabel1);
-        jLabel1.setBounds(250, 300, 510, 146);
+        jLabel1.setBounds(300, 340, 510, 146);
 
         jButton1.setBackground(new java.awt.Color(0, 176, 240));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
@@ -138,7 +140,21 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton1);
-        jButton1.setBounds(10, 5, 170, 60);
+        jButton1.setBounds(10, 5, 180, 60);
+
+        jButton7.setBackground(new java.awt.Color(0, 176, 240));
+        jButton7.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton7.setForeground(new java.awt.Color(255, 255, 255));
+        jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icona_archive_25.png"))); // NOI18N
+        jButton7.setText("Client Archive");
+        jButton7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton7ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton7);
+        jButton7.setBounds(740, 5, 170, 60);
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nuvola_25.png"))); // NOI18N
         getContentPane().add(jLabel2);
@@ -166,23 +182,24 @@ public class HomePage extends javax.swing.JFrame {
         jLabel7.setBounds(10, 500, 480, 150);
 
         jPanel1.setBackground(new java.awt.Color(161, 226, 249));
+        jPanel1.setLayout(null);
 
-        jButton7.setText("Client Archive");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-        jPanel1.add(jButton7);
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nuvola_25.png"))); // NOI18N
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(850, 570, 320, 180);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nuvola_10.png"))); // NOI18N
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(710, 580, 150, 110);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 80, 1000, 600);
+        jPanel1.setBounds(0, 80, 1100, 720);
 
         jPanel2.setBackground(new java.awt.Color(0, 176, 240));
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(0, 0, 1000, 80);
+        jPanel2.setBounds(0, 0, 1100, 80);
 
-        setSize(new java.awt.Dimension(1000, 680));
+        setSize(new java.awt.Dimension(1102, 799));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -285,6 +302,8 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
