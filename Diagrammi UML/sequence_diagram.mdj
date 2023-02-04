@@ -935,7 +935,7 @@
 														"$ref": "AAAAAAGGHBrB7efGv/8="
 													},
 													"edgePosition": 1,
-													"text": "4 : utente autorizzato"
+													"text": "4 : nuovo utente"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -1311,7 +1311,7 @@
 									"_parent": {
 										"$ref": "AAAAAAGGHBTF7+bJxfQ="
 									},
-									"name": "utente autorizzato",
+									"name": "nuovo utente",
 									"source": {
 										"$ref": "AAAAAAGGHBWBUeb5l3U="
 									},
