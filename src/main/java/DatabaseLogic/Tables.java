@@ -20,9 +20,10 @@ public class Tables {
         {
             con=ConnectionProvider.getCon();
             st=con.createStatement();
-            st.executeUpdate("create table users(name varchar(200),password varchar(50),email varchar(200),address varchar(200),securityQuestion varchar(500),answer varchar(200),status varchar(20))");
-            st.executeUpdate("create table room(roomNumber varchar(10),roomType varchar(200),bed varchar(200),price int,status varchar(20))");
-            st.executeUpdate("create table customer(id int,name varchar(200),surname varchar(250),mobileNumber varchar(15),gender varchar(50),email varchar(200),idProof varchar(200),address varchar(500),checkInDate varchar(50),roomNumber varchar(10),bed varchar(200),roomType varchar(200),pricePerDay int(10),daysStayed int(10),totalPrice varchar(200),checkOut varchar(50))");
+            st.executeUpdate("CREATE TABLE IF NOT EXISTS"
+                    + " users(name varchar(200),password varchar(50),email varchar(200),address varchar(200),securityQuestion varchar(500),answer varchar(200),status varchar(20))");
+            st.executeUpdate("CREATE TABLE IF NOT EXISTS room(roomNumber varchar(10),roomType varchar(200),bed varchar(200),price int,status varchar(20))");
+            st.executeUpdate("CREATE TABLE IF NOT EXISTS customer(id int,name varchar(200),surname varchar(250),mobileNumber varchar(15),gender varchar(50),email varchar(200),idProof varchar(200),address varchar(500),checkInDate varchar(50),roomNumber varchar(10),bed varchar(200),roomType varchar(200),pricePerDay int(10),daysStayed int(10),totalPrice varchar(200),checkOut varchar(50))");
             JOptionPane.showMessageDialog(null,"Table created successfully");
         }
         catch(Exception e)

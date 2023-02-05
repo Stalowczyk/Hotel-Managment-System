@@ -73,11 +73,11 @@ public class CustomerCheckOut extends javax.swing.JFrame {
         jTextField9 = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
         jLabel11 = new javax.swing.JLabel();
         jTextField10 = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        jButton4 = new javax.swing.JButton();
 
         setMinimumSize(new java.awt.Dimension(900, 600));
         setUndecorated(true);
@@ -197,15 +197,6 @@ public class CustomerCheckOut extends javax.swing.JFrame {
         getContentPane().add(jButton3);
         jButton3.setBounds(510, 70, 72, 23);
 
-        jButton4.setText("Back");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jButton4);
-        jButton4.setBounds(1038, 17, 72, 23);
-
         jLabel11.setForeground(new java.awt.Color(0, 155, 210));
         jLabel11.setText("Customer Surname");
         getContentPane().add(jLabel11);
@@ -220,19 +211,32 @@ public class CustomerCheckOut extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(161, 226, 249));
 
+        jButton4.setText("Back");
+        jButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton4ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1170, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(jButton4)
+                .addContainerGap(1082, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 540, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(553, Short.MAX_VALUE)
+                .addComponent(jButton4)
+                .addGap(34, 34, 34))
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 1170, 540);
+        jPanel1.setBounds(0, 0, 1170, 610);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed

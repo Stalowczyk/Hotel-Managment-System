@@ -89,7 +89,7 @@ public class CurrentOccupiedRooms extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
 
         getContentPane().add(jScrollPane1);
-        jScrollPane1.setBounds(30, 126, 830, 400);
+        jScrollPane1.setBounds(30, 126, 830, 420);
 
         jPanel1.setBackground(new java.awt.Color(161, 226, 249));
 
@@ -101,11 +101,11 @@ public class CurrentOccupiedRooms extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 530, Short.MAX_VALUE)
+            .addGap(0, 610, Short.MAX_VALUE)
         );
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 910, 530);
+        jPanel1.setBounds(0, 0, 910, 610);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents

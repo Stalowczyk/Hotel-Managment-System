@@ -59,6 +59,8 @@ public class Login extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(600, 600));
         setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(600, 600));
+        setResizable(false);
         getContentPane().setLayout(null);
 
         jPanel1.setBackground(new java.awt.Color(0, 176, 240));
@@ -85,10 +87,10 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton4);
-        jButton4.setBounds(460, 10, 30, 30);
+        jButton4.setBounds(550, 10, 40, 30);
 
         getContentPane().add(jPanel1);
-        jPanel1.setBounds(0, 0, 500, 120);
+        jPanel1.setBounds(0, 0, 600, 120);
 
         jPanel2.setBackground(new java.awt.Color(161, 226, 249));
         jPanel2.setLayout(null);
@@ -103,7 +105,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton3);
-        jButton3.setBounds(320, 180, 146, 23);
+        jButton3.setBounds(380, 170, 146, 23);
 
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jButton1.setForeground(new java.awt.Color(0, 155, 210));
@@ -114,7 +116,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton1);
-        jButton1.setBounds(130, 220, 251, 40);
+        jButton1.setBounds(160, 210, 251, 40);
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 155, 210));
@@ -126,7 +128,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jButton2);
-        jButton2.setBounds(230, 270, 152, 30);
+        jButton2.setBounds(260, 270, 152, 30);
 
         jPasswordField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,7 +136,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jPasswordField1);
-        jPasswordField1.setBounds(190, 130, 280, 30);
+        jPasswordField1.setBounds(230, 130, 280, 30);
 
         jTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,38 +144,38 @@ public class Login extends javax.swing.JFrame {
             }
         });
         jPanel2.add(jTextField1);
-        jTextField1.setBounds(190, 60, 280, 30);
+        jTextField1.setBounds(230, 60, 280, 30);
 
         jLabel2.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(0, 155, 210));
         jLabel2.setText("Email");
         jPanel2.add(jLabel2);
-        jLabel2.setBounds(50, 60, 210, 32);
+        jLabel2.setBounds(80, 60, 210, 32);
 
         jLabel3.setFont(new java.awt.Font("SansSerif", 0, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 155, 210));
         jLabel3.setText("Password");
         jPanel2.add(jLabel3);
-        jLabel3.setBounds(50, 130, 131, 32);
+        jLabel3.setBounds(80, 130, 131, 32);
 
         jLabel4.setForeground(new java.awt.Color(0, 155, 210));
         jLabel4.setText("First time access?");
         jPanel2.add(jLabel4);
-        jLabel4.setBounds(130, 280, 100, 16);
+        jLabel4.setBounds(160, 280, 100, 16);
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nuvola_20.png"))); // NOI18N
         jPanel2.add(jLabel5);
-        jLabel5.setBounds(300, 260, 330, 150);
+        jLabel5.setBounds(380, 290, 250, 260);
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/nuvola_inv_5.png"))); // NOI18N
         jPanel2.add(jLabel6);
         jLabel6.setBounds(10, 90, 80, 50);
 
         getContentPane().add(jPanel2);
-        jPanel2.setBounds(0, 120, 500, 380);
+        jPanel2.setBounds(0, 120, 600, 480);
 
-        setSize(new java.awt.Dimension(500, 500));
+        setSize(new java.awt.Dimension(600, 600));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
