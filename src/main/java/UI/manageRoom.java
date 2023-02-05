@@ -93,9 +93,9 @@ public class manageRoom extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(0, 155, 210));
         jLabel2.setText("Room Number");
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(430, 70, 130, 20);
+        jLabel2.setBounds(430, 70, 130, 30);
         jPanel1.add(jTextField1);
-        jTextField1.setBounds(520, 70, 290, 22);
+        jTextField1.setBounds(520, 70, 290, 30);
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Standard", "Junior", "Penthouse", "Bridal", "Honeymoon", "Presidential" }));
         jPanel1.add(jComboBox1);
@@ -121,9 +121,9 @@ public class manageRoom extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(0, 155, 210));
         jLabel5.setText("Price");
         jPanel1.add(jLabel5);
-        jLabel5.setBounds(430, 300, 40, 20);
+        jLabel5.setBounds(430, 290, 40, 30);
         jPanel1.add(jTextField2);
-        jTextField2.setBounds(520, 290, 290, 22);
+        jTextField2.setBounds(520, 290, 290, 30);
 
         jButton1.setBackground(new java.awt.Color(0, 155, 210));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N

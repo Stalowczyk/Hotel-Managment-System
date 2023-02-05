@@ -111,7 +111,7 @@ public class CustomerCheckOut extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jTextField1);
-        jTextField1.setBounds(160, 70, 250, 22);
+        jTextField1.setBounds(160, 70, 250, 30);
 
         jButton1.setBackground(new java.awt.Color(0, 176, 240));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -136,21 +136,21 @@ public class CustomerCheckOut extends javax.swing.JFrame {
         getContentPane().add(jLabel4);
         jLabel4.setBounds(33, 270, 90, 16);
         getContentPane().add(jTextField3);
-        jTextField3.setBounds(150, 270, 250, 22);
+        jTextField3.setBounds(150, 262, 250, 30);
 
         jLabel5.setForeground(new java.awt.Color(0, 155, 210));
         jLabel5.setText("Check Out Date");
         getContentPane().add(jLabel5);
         jLabel5.setBounds(33, 320, 90, 20);
         getContentPane().add(jTextField4);
-        jTextField4.setBounds(150, 320, 250, 22);
+        jTextField4.setBounds(150, 312, 250, 30);
 
         jLabel6.setForeground(new java.awt.Color(0, 155, 210));
         jLabel6.setText("Mobile Number");
         getContentPane().add(jLabel6);
         jLabel6.setBounds(460, 140, 84, 16);
         getContentPane().add(jTextField5);
-        jTextField5.setBounds(570, 140, 250, 22);
+        jTextField5.setBounds(570, 132, 250, 30);
         getContentPane().add(jLabel7);
         jLabel7.setBounds(6, 296, 0, 0);
 
@@ -164,18 +164,18 @@ public class CustomerCheckOut extends javax.swing.JFrame {
         getContentPane().add(jLabel9);
         jLabel9.setBounds(440, 310, 127, 16);
         getContentPane().add(jTextField6);
-        jTextField6.setBounds(570, 180, 250, 22);
+        jTextField6.setBounds(570, 172, 250, 30);
         getContentPane().add(jTextField7);
-        jTextField7.setBounds(580, 270, 250, 22);
+        jTextField7.setBounds(580, 262, 250, 30);
         getContentPane().add(jTextField8);
-        jTextField8.setBounds(580, 310, 250, 22);
+        jTextField8.setBounds(580, 302, 250, 30);
 
         jLabel10.setForeground(new java.awt.Color(0, 155, 210));
         jLabel10.setText("Total Amount to be Paid");
         getContentPane().add(jLabel10);
         jLabel10.setBounds(440, 350, 150, 20);
         getContentPane().add(jTextField9);
-        jTextField9.setBounds(580, 350, 250, 22);
+        jTextField9.setBounds(580, 342, 250, 30);
 
         jButton2.setBackground(new java.awt.Color(0, 176, 240));
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -206,7 +206,7 @@ public class CustomerCheckOut extends javax.swing.JFrame {
         getContentPane().add(jLabel11);
         jLabel11.setBounds(50, 180, 102, 16);
         getContentPane().add(jTextField10);
-        jTextField10.setBounds(160, 180, 250, 22);
+        jTextField10.setBounds(160, 172, 250, 30);
 
         jLabel12.setForeground(new java.awt.Color(0, 155, 210));
         jLabel12.setText("Email");
@@ -216,7 +216,7 @@ public class CustomerCheckOut extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(161, 226, 249));
         jPanel1.setLayout(null);
         jPanel1.add(jTextField2);
-        jTextField2.setBounds(160, 140, 250, 22);
+        jTextField2.setBounds(160, 132, 250, 30);
 
         getContentPane().add(jPanel1);
         jPanel1.setBounds(0, 0, 1170, 540);
