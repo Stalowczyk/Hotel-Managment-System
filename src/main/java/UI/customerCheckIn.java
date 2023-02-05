@@ -317,7 +317,9 @@ public class customerCheckIn extends javax.swing.JFrame {
                 id=rs.getInt(1);
             id=id+1;
             
-            if(!price.equals(""))
+            if((!price.equals("")) && (id!=0) &&(!name.equals("")) &&(!surname.equals("")) &&(!mobileNumber.equals(""))
+                    &&(!gender.equals("")) &&(!email.equals("")) &&(!idProof.equals("")) &&(!address.equals(""))
+                &&(!checkInDate.equals("")) &&(!bed.equals("")) &&(!roomType.equals("")) &&(!roomNumber.equals("")) &&(!price.equals("")))
             {
                 Query="update room set status='Booked' where roomNumber='"+roomNumber+"'";
                 DBUpdater.setData(Query,"");
