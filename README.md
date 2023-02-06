@@ -11,3 +11,4 @@ Nella cartella documentazione sono presenti
 
 La cartella Hotel-Management-System contiene il programma realizzato per il progetto si ingegneria del software.
 Il programma è stato realizzato con Apache NetBeans e il suo database è gestito tramite MySQL.
+Per avviare il programma è necessiario avviare la classe Login. 
